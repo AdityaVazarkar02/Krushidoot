@@ -38,7 +38,7 @@ function Navbar() {
           style={{
             background: "#0b5d3b",
             width: "95%",
-            maxWidth: "1400px",
+            maxWidth: "2000px",
             borderRadius: "50px",
             padding: "clamp(10px, 2vw, 12px) clamp(20px, 4vw, 25px)",
             display: "flex",
@@ -59,6 +59,7 @@ function Navbar() {
             <img
               src={logo}
               alt="Krushidoot Logo"
+              className="nav-logo"
               style={{
                 height: "55px",
                 width: "auto",
@@ -158,14 +159,14 @@ function Navbar() {
         }
 
         @media (max-width: 1024px) {
-          img {
+          .nav-logo {
             height: 50px !important;
           }
         }
 
         @media (max-width: 768px) {
-          img {
-            display: none;
+          .nav-logo {
+            height: 40px !important;
           }
           
           .desktop-menu {
@@ -177,8 +178,8 @@ function Navbar() {
         }
 
         @media (max-width: 480px) {
-          img {
-            display: none;
+          .nav-logo {
+            height: 35px !important;
           }
         }
       `}</style>

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-import FreshMilk from "../assets/FreshMilk.webp";
+import WhatsAppButton from "../components/WhatsAppButton";
+import FreshMilk from "../assets/gallery/Milk.jpeg";
 
 const DairyFarmPage = () => {
   useEffect(() => {
@@ -30,6 +31,16 @@ const DairyFarmPage = () => {
       },
       {
         heading: "Cow Dung",
+        uses: [
+          "Organic farming manure",
+          "Biogas production",
+          "Compost preparation",
+        ],
+        rate: "₹_____ per kg",
+        bulk: "Bulk orders available.",
+      },
+       {
+        heading: "Open Shed Cow Dung",
         uses: [
           "Organic farming manure",
           "Biogas production",
@@ -166,6 +177,7 @@ const DairyFarmPage = () => {
                   )}
                 </div>
               ))}
+              <WhatsAppButton productName={product.title} style={{ marginTop: "20px" }} />
             </div>
           </div>
         </div>

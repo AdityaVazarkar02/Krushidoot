@@ -14,6 +14,8 @@ import DairyFarmPage from "./Pages/DairyFarmPage";
 import GoatFarmPage from "./Pages/GoatFarmPage";
 import FreshVegetablesPage from "./Pages/FreshVegetablesPage";
 import OrganicEggsPage from "./Pages/OrganicEggsPage";
+import SheepFarmPage from "./Pages/SheepFarmPage";
+import FreshFruitPage from "./Pages/FreshFruitPage";
 import ScrollToTop from "./components/ScrollToTop";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
@@ -62,6 +64,8 @@ function App() {
           <Route path="/goat-farm" element={<GoatFarmPage />} />
           <Route path="/vegetables" element={<FreshVegetablesPage />} />
           <Route path="/organic-eggs" element={<OrganicEggsPage />} />
+          <Route path="/sheep-farm" element={<SheepFarmPage />} />
+          <Route path="/fruits" element={<FreshFruitPage />} />
         </Routes>
       </div>
     </Router>

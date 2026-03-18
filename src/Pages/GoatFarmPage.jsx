@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import WhatsAppButton from "../components/WhatsAppButton";
 import FarmGoat from "../assets/FarmGoat.jpg";
 
 const GoatFarmPage = () => {
@@ -22,6 +23,16 @@ const GoatFarmPage = () => {
           "Live goats for meat purpose",
           "Weight range: _____ kg onwards",
           "Healthy and vaccinated stock",
+        ],
+        rate: "₹_____ per kg (Live weight)",
+        booking: "Advance booking and bulk supply available.",
+      },
+      {
+        heading: "Goat Manure",
+        details: [
+          "High-quality organic fertilizer produced from goat waste",
+          "Rich in nitrogen, phosphorus, and potassium",
+          "Improves soil fertility and structure",
         ],
         rate: "₹_____ per kg (Live weight)",
         booking: "Advance booking and bulk supply available.",
@@ -142,6 +153,7 @@ const GoatFarmPage = () => {
                   )}
                 </div>
               ))}
+              <WhatsAppButton productName={product.title} style={{ marginTop: "20px" }} />
             </div>
           </div>
         </div>

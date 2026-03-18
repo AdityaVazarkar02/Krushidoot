@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import WhatsAppButton from "../components/WhatsAppButton";
 import WormyCompost from "../assets/WormyCompost.jpeg";
 
 const VermicompostPage = () => {
@@ -37,6 +38,20 @@ const VermicompostPage = () => {
         benefits: [
           "Improves plant immunity",
           "Enhances leaf growth",
+          "Increases flowering and fruiting",
+          "Acts as a natural pest repellent",
+        ],
+        usage: "Dilute with water (1:10 ratio) and spray on crops.",
+        packaging: "1 litre / 5 litre",
+        rate: "₹_____ per litre",
+      },
+      {
+        heading: "Worms (Eisenia fetida)",
+        description:
+          "High-quality composting worms used in the vermicomposting process.",
+        benefits: [
+          "Improves soil structure and aeration",
+          "Enhances water retention capacity",
           "Increases flowering and fruiting",
           "Acts as a natural pest repellent",
         ],
@@ -165,6 +180,7 @@ const VermicompostPage = () => {
                   )}
                 </div>
               ))}
+              <WhatsAppButton productName={product.title} style={{ marginTop: "20px" }} />
             </div>
           </div>
         </div>

@@ -14,8 +14,10 @@ function About() {
 
       <div className="about-card">
         {/* Circular Image */}
-        <div className="about-image">
-          <img src={farmerImg} alt="Farmer" />
+        <div className="about-image-wrapper">
+          <div className="about-image">
+            <img src={farmerImg} alt="Farmer" />
+          </div>
         </div>
 
         {/* Content */}
@@ -24,7 +26,7 @@ function About() {
           <h4>B.Sc Agriculture</h4>
 
           <p>
-            Ketan Hinge, founder of Krushidoot, holds a Bachelor’s degree in
+            Ketan Hinge, founder of Krushidoot, holds a Bachelor's degree in
             Agriculture and carries a deep passion for farming and nature.
             While many chose city careers, he chose the soil — driven by his
             belief in sustainable agriculture and rural development.
@@ -44,7 +46,7 @@ function About() {
           padding: clamp(40px, 8vw, 80px) clamp(20px, 5vw, 50px);
           background: #e9f1e3;
           text-align: center;
-          overflowX: hidden;
+          overflow-x: hidden;
         }
 
         .about-title {
@@ -74,24 +76,33 @@ function About() {
           box-shadow: 0 10px 30px rgba(0,0,0,0.08);
         }
 
-        /* PERFECT CIRCLE IMAGE WITHOUT CROPPING */
-        .about-image {
-          width: 250px;
-          height: 250px;
-          border-radius: 50%;
-          border: 8px solid #b5e048;
-          overflow: hidden;
+        .about-image-wrapper {
           flex-shrink: 0;
-          background: #ffffff;
           display: flex;
           align-items: center;
           justify-content: center;
         }
 
+        /* LARGER, CLEARER CIRCLE IMAGE */
+        .about-image {
+          width: clamp(200px, 28vw, 320px);
+          height: clamp(200px, 28vw, 320px);
+          border-radius: 50%;
+          border: clamp(5px, 1vw, 8px) solid #b5e048;
+          overflow: hidden;
+          background: #ffffff;
+          display: flex;
+          align-items: flex-start;  /* align to top so face shows */
+          justify-content: center;
+          box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+        }
+
         .about-image img {
-          width: 90%;
-          height: 90%;
-          object-fit: contain; /* 🔥 Prevents cutting */
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: center top; /* 🔥 Shows face/top of image clearly */
+          display: block;
         }
 
         .about-content {
@@ -120,17 +131,8 @@ function About() {
 
         /* Tablet */
         @media (max-width: 1024px) {
-          .about-image {
-            width: 200px;
-            height: auto;
-            border-radius: 0;
-            border: none;
-          }
-          
-          .about-image img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
+          .about-card {
+            gap: 30px;
           }
         }
 
@@ -158,19 +160,13 @@ function About() {
             text-align: center;
           }
 
-          .about-image {
-            width: 100%;
-            height: auto;
-            max-width: 250px;
-            border-radius: 0;
-            border: none;
+          .about-image-wrapper {
             margin: 0 auto 20px;
           }
 
-          .about-image img {
-            width: 100%;
-            height: auto;
-            object-fit: contain;
+          .about-image {
+            width: clamp(180px, 55vw, 260px);
+            height: clamp(180px, 55vw, 260px);
           }
 
           .about-content h3 {

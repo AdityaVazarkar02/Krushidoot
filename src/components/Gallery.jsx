@@ -1,21 +1,31 @@
 import React, { useState, memo } from "react";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import WhatsAppButton from "./WhatsAppButton";
 
 // Wormy Compost Images
 import WormyCompost1 from "../assets/gallery/wormy-compost/VarmingCompost.jpeg";
 import WormyCompost2 from "../assets/gallery/wormy-compost/VarmingCompost1.jpeg";
 import WormyCompost3 from "../assets/gallery/wormy-compost/VarmingCompost2.jpeg";
+import WormyCompost4 from "../assets/gallery/wormy-compost/Compost1.jpeg";
+import WormyCompost5 from "../assets/gallery/wormy-compost/Compost2.jpeg";
+import WormyCompost6 from "../assets/gallery/wormy-compost/Compost3.jpeg";
 
 // Fresh Milk Images
 import FreshMilk1 from "../assets/gallery/fresh-milk/WhatsApp Image 2026-02-28 at 2.22.52 PM.jpeg";
 import FreshMilk2 from "../assets/gallery/fresh-milk/WhatsApp Image 2026-02-28 at 2.22.52 PM (1).jpeg";
 import FreshMilk3 from "../assets/gallery/fresh-milk/WhatsApp Image 2026-02-28 at 2.22.52 PM (2).jpeg";
 import FreshMilk4 from "../assets/gallery/fresh-milk/WhatsApp Image 2026-02-28 at 2.22.53 PM.jpeg";
+import CowDung from "../assets/gallery/fresh-milk/image.png";
+import CowDung1 from "../assets/gallery/fresh-milk/Dung2.jpeg";
 
 // Farm Goat Images
 import FarmGoat1 from "../assets/gallery/farm-goat/WhatsApp Image 2026-02-28 at 2.22.51 PM.jpeg";
 import FarmGoat2 from "../assets/gallery/farm-goat/WhatsApp Image 2026-02-28 at 2.22.51 PM (1).jpeg";
+import FarmGoat3 from "../assets/gallery/farm-goat/image.png";
+import FarmGoat4 from "../assets/gallery/farm-goat/Gote1.jpeg";
+import FarmGoat5 from "../assets/gallery/farm-goat/Gote2.jpeg";
+import FarmGoat6 from "../assets/gallery/farm-goat/Gote3.jpeg";
 
 // Organic Eggs Images
 import OrganicEggs1 from "../assets/gallery/organic-eggs/egg1.jpeg";
@@ -29,6 +39,10 @@ import FreshVegetables1 from "../assets/gallery/fresh-vegetables/WhatsApp Image 
 import FreshVegetables2 from "../assets/gallery/fresh-vegetables/WhatsApp Image 2026-02-23 at 3.29.46 PM.jpeg";
 import FreshVegetables3 from "../assets/gallery/fresh-vegetables/WhatsApp Image 2026-02-23 at 3.29.46 PM (1).jpeg";
 import FreshVegetables4 from "../assets/gallery/fresh-vegetables/WhatsApp Image 2026-02-23 at 3.29.46 PM (2).jpeg";
+import FreshVegetables5 from "../assets/gallery/fresh-vegetables/demo.jpeg";
+import FreshVegetables6 from "../assets/gallery/fresh-vegetables/demo2.jpeg";
+
+
 const GalleryCategory = memo(({ title, images, onImageClick }) => {
   const [scrollPosition, setScrollPosition] = useState(0);
 
@@ -275,29 +289,29 @@ function Gallery() {
   // Gallery categories with empty arrays - users will add images to these folders
   const galleryData = [
     {
-      title: "Wormy Compost",
+      title: "Vermicompost",
       path: "gallery/wormy-compost",
-      images: [WormyCompost1, WormyCompost2, WormyCompost3],
+      images: [WormyCompost1, WormyCompost3 , WormyCompost4, WormyCompost5, WormyCompost6],
     },
     {
-      title: "Fresh Milk",
+      title: "Cow Products",
       path: "gallery/fresh-milk",
-      images: [FreshMilk1, FreshMilk2, FreshMilk3, FreshMilk4],
+      images: [ FreshMilk2, FreshMilk3, FreshMilk4 , CowDung, CowDung1] ,
     },
     {
       title: "Farm Goat",
       path: "gallery/farm-goat",
-      images: [FarmGoat1, FarmGoat2],
+      images: [FarmGoat6, FarmGoat1, FarmGoat2 , FarmGoat3 , FarmGoat4 , FarmGoat5],
+    },
+    {
+      title: "Fresh Vegetables & Fruits",
+      path: "gallery/fresh-vegetables",
+      images: [FreshVegetables1, FreshVegetables2, FreshVegetables3, FreshVegetables4 , FreshVegetables5, FreshVegetables6],
     },
     {
       title: "Organic Eggs",
       path: "gallery/organic-eggs",
       images: [OrganicEggs1, OrganicEggs2, OrganicEggs3, OrganicEggs4, OrganicEggs5],
-    },
-    {
-      title: "Fresh Vegetables",
-      path: "gallery/fresh-vegetables",
-      images: [FreshVegetables1, FreshVegetables2, FreshVegetables3, FreshVegetables4],
     },
   ];
 
@@ -368,6 +382,18 @@ function Gallery() {
               </p>
             </div>
 
+            {/* Floating WhatsApp Button */}
+            <WhatsAppButton 
+              productName="Farm Products" 
+              style={{
+                position: "fixed",
+                bottom: "30px",
+                right: "30px",
+                zIndex: "2000",
+                boxShadow: "0 6px 20px rgba(0, 0, 0, 0.2)"
+              }}
+            />
+            
             {/* Gallery Categories */}
             <div>
               {galleryData.map((category, index) => (

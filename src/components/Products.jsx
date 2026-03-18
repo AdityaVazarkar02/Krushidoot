@@ -2,9 +2,10 @@ import React, { memo } from "react";
 import { Link } from "react-router-dom";
 
 import WormyCompost from "../assets/WormyCompost.jpeg";
-import FreshMilk from "../assets/FreshMilk.webp";
+import FreshMilk from "../assets/gallery/Milk.jpeg";
 import FarmGoat from "../assets/FarmGoat.jpg";
 import OrganicEggs from "../assets/OrganicEggs.jpg";
+import Sheep from "../assets/Sheep.jpg";
 import FreshVegetables from "../assets/FreshVegetables.jpg";
 
 const ProductCard = memo(({ item }) => {
@@ -109,7 +110,7 @@ ProductCard.displayName = "ProductCard";
 function Products() {
   const products = [
     {
-      name: "Wormy Compost",
+      name: "Vermicompost",
       image: WormyCompost,
       desc: "Organic fertilizer made from natural composting. 100% chemical-free and rich in nutrients for your plants.",
       path: "/vermicompost",
@@ -121,22 +122,34 @@ function Products() {
       path: "/dairy-farm",
     },
     {
-      name: "Farm Goat",
+      name: "Goat Farm",
       image: FarmGoat,
       desc: "Healthy farm-raised goats. Grown naturally with proper care and nutrition.",
       path: "/goat-farm",
-    },
-    {
-      name: "Organic Eggs",
-      image: OrganicEggs,
-      desc: "Fresh organic farm eggs from free-range chickens. Rich in nutrients and taste.",
-      path: "/organic-eggs",
     },
     {
       name: "Fresh Vegetables",
       image: FreshVegetables,
       desc: "Fresh seasonal vegetables grown organically on our farm. Pesticide-free and nutrient-rich.",
       path: "/vegetables",
+    },
+    {
+      name: "Fresh Fruits",
+      image: "https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg?auto=compress&cs=tinysrgb&w=600",
+      desc: "Delicious seasonal fruits grown naturally. Fresh, sweet, and packed with vitamins directly from our orchards.",
+      path: "/fruits",
+    },
+    {
+      name: "Sheep Farm",
+      image: Sheep,
+      desc: "Coming soon! Healthy farm-raised sheep. Grown naturally with proper care and nutrition.",
+      path: "/sheep-farm",
+    },
+     {
+      name: "Organic Eggs",
+      image: OrganicEggs,
+      desc: "Coming soon! Fresh organic eggs from free-range chickens. Rich in omega-3 fatty acids and essential nutrients.",
+      path: "/organic-eggs",
     },
   ];
 

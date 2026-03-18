@@ -1,16 +1,16 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import WhatsAppButton from "../components/WhatsAppButton";
-import OrganicEggs from "../assets/OrganicEggs.jpg";
+import Sheep from "../assets/Sheep.jpg";
 
-const OrganicEggsPage = () => {
+const SheepFarmPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   const product = {
-    title: "Organic Eggs",
-    image: OrganicEggs,
+    title: "Sheep Farm",
+    image: Sheep,
   };
 
   const isComingSoon = true; // 👉 toggle this later
@@ -108,7 +108,7 @@ const OrganicEggsPage = () => {
                 margin: "0 auto",
               }}
             >
-              We are working hard to bring you fresh organic eggs directly from
+              We are working hard to bring you healthy farm-raised sheep directly from
               our farm. Stay tuned for updates!
             </p>
           </>
@@ -126,4 +126,4 @@ const OrganicEggsPage = () => {
   );
 };
 
-export default OrganicEggsPage;
+export default SheepFarmPage;
